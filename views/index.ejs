@@ -16,30 +16,18 @@
     <!-- Page content -->
     <div class="ps-content">
       <!-- About Section -->
+
       <div class="ps-row ps-padding-64" id="about">
         <div class="ps-col m6 ps-padding-large ps-hide-small">
-          <img
-            src="/images/principal.jpg"
-            class="ps-round ps-image ps-opacity-min"
-            alt="SAbores que enamoran"
-            width="600"
-            height="750"
-          />
+          <img src="/images/principal.jpg" class="ps-round ps-image ps-opacity-min" alt="SAbores que enamoran" width="600" height="750" />
         </div>
 
         <div class="ps-col m6 ps-padding-large">
           <h1 class="ps-center"><%= about.titulo %></h1>
           <br />
-          <p class="ps-large">
-            <%= about.lorem1 %><span class="ps-tag ps-light-grey"
-              >seasonal</span
-            >
-            ingredients.
-          </p>
+          <p class="ps-large"><%= about.lorem1 %><span class="ps-tag ps-light-grey">seasonal</span> ingredients.</p>
 
-          <p class="ps-large ps-text-grey ps-hide-medium">
-            <%= about.lorem2 %>
-          </p>
+          <p class="ps-large ps-text-grey ps-hide-medium"><%= about.lorem2 %></p>
         </div>
       </div>
 
@@ -50,28 +38,23 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <br />
           <% platos.forEach(plato => { %>
-            <h4><%= plato.nombre %></h4>
-            
-            <p class="ps-text-grey"> <%= plato.descriptcion %></p>
+          <h4><%= plato.nombre %></h4>
 
-            <a href="/detalle/<%= plato.id %>">Ver detalle</a>
+          <p class="ps-text-grey"><%= plato.descriptcion %></p>
 
-            <br />
-          <% }) %>            
+          <a href="/detalle/<%= plato.id %>">Ver detalle</a>
+
+          <br />
+          <% }) %>
         </div>
 
         <div class="ps-col l6 ps-padding-large ps-img-menu">
-          <img
-            src="/images/menu.jpg"
-            class="ps-round ps-image ps-opacity-min"
-            alt="Menu"
-          />
+          <img src="/images/menu.jpg" class="ps-round ps-image ps-opacity-min" alt="Menu"/>
         </div>
       </div>
 
-      <%- include('./partials/footer') %> 
+      <%- include('./partials/footer') %>
       <!-- Footer -->
-     
     </div>
   </body>
 </html>
